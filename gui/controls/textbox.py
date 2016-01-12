@@ -194,7 +194,7 @@ class TextBox(Control):
     get_string_selection = lambda self: self.wx_obj.GetStringSelection
     
     def get_string(self, aFrom, aTo):
-        return self.GetValue()[aFrom:aTo]
+        return self.wx_obj.GetValue()[aFrom:aTo]
 
     def _get_mask(self):
         if hasattr(self.wx_obj, "GetMask"):
